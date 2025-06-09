@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Fyro.ai Blog</title>
+        <link>https://richhuang.github.io/eform2_docs/en/blog</link>
+        <description>Fyro.ai Blog</description>
+        <lastBuildDate>Tue, 03 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[虛擬表單ID與安靜模式：讓表單嵌入和設計更靈活]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/06/03/virtual-formid-silent-mode</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/06/03/virtual-formid-silent-mode</guid>
+            <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[在我們最近的更新中，fyro.ai 的表單系統加入了兩個實用的功能：「虛擬表單ID」與「安靜模式」。這些設計讓表單更適合被嵌入在其他系統中，或是作為 iframe 進行整合。]]></description>
+            <content:encoded><![CDATA[<p>在我們最近的更新中，fyro.ai 的表單系統加入了兩個實用的功能：「虛擬表單ID」與「安靜模式」。這些設計讓表單更適合被嵌入在其他系統中，或是作為 iframe 進行整合。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="虛擬表單id是什麼">虛擬表單ID是什麼？<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/06/03/virtual-formid-silent-mode#%E8%99%9B%E6%93%AC%E8%A1%A8%E5%96%AEid%E6%98%AF%E4%BB%80%E9%BA%BC" class="hash-link" aria-label="Direct link to 虛擬表單ID是什麼？" title="Direct link to 虛擬表單ID是什麼？">​</a></h2>
+<p>有時候，我們不需要整個完整的表單結構，只需要顯示某個段落（Section）就好。虛擬表單ID就是這樣的解決方案。</p>
+<p>當你在網址上帶入的 <code>FormId</code> 其實對應的是某個段落（SectionId），系統會自動將它轉換為一個虛擬的表單結構顯示出來。這種方式不需要真正建立一份完整表單資料，只要一個 Section 就可以產生可用的表單畫面，非常適合用在：</p>
+<ul>
+<li>iframe 內嵌段落表單</li>
+<li>快速生成單一區塊的設計介面</li>
+<li>其他系統想直接呼叫 fyro.ai 某個表單區塊</li>
+</ul>
+<blockquote>
+<p>⚠️ 虛擬表單無法進行結構編輯，僅能顯示與填寫資料。</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="安靜模式是什麼">安靜模式是什麼？<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/06/03/virtual-formid-silent-mode#%E5%AE%89%E9%9D%9C%E6%A8%A1%E5%BC%8F%E6%98%AF%E4%BB%80%E9%BA%BC" class="hash-link" aria-label="Direct link to 安靜模式是什麼？" title="Direct link to 安靜模式是什麼？">​</a></h2>
+<p>當表單被內嵌在其他系統（如 iframe）中時，使用者可能不需要看到每次送出後的跳出視窗（例如「儲存成功！」提示）。這時候就可以使用「安靜模式」。</p>
+<p>透過 <code>postMessage</code> 呼叫 JS 方法時加入 <code>silent</code> 參數，系統在成功或失敗時都不會顯示任何提示視窗，非常適合用於背景儲存、或自動提交等用途。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="常見應用">常見應用<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/06/03/virtual-formid-silent-mode#%E5%B8%B8%E8%A6%8B%E6%87%89%E7%94%A8" class="hash-link" aria-label="Direct link to 常見應用" title="Direct link to 常見應用">​</a></h3>
+<ul>
+<li>在 iframe 中「送出」或「儲存」時，不打斷主系統使用流程</li>
+<li>搭配 JS 事件整合，讓畫面反應更順暢</li>
+<li>與 no-code 工具整合做背景任務時的最佳搭檔</li>
+</ul>
+<hr>
+<p>這些改進都是為了讓 fyro.ai 更容易被整合進你原本的工作流程中。無論是自己開發系統、還是跟第三方工具合作，現在都可以更自由地呼叫我們的表單顯示、編輯與送出邏輯。</p>
+<blockquote>
+<p>💡 想看怎麼用 iframe 整合表單？或想試試「虛擬表單ID」的效果？歡迎留言給我們，我們可以提供實例與建議！</p>
+</blockquote>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[使用者設定與登出功能上線！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/26/user-settings-and-logout</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/26/user-settings-and-logout</guid>
+            <pubDate>Mon, 26 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[在 fyro.ai 的表單系統中，我們新增了一個讓你更方便管理自己帳號的小工具！現在，你只要點一下「目前使用者」就能叫出一個彈跳視窗，裡面除了顯示你的名字，還可以快速做兩件事：]]></description>
+            <content:encoded><![CDATA[<p>在 fyro.ai 的表單系統中，我們新增了一個讓你更方便管理自己帳號的小工具！現在，你只要點一下「目前使用者」就能叫出一個彈跳視窗，裡面除了顯示你的名字，還可以快速做兩件事：</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-修改個人資料">✅ 修改個人資料<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/26/user-settings-and-logout#-%E4%BF%AE%E6%94%B9%E5%80%8B%E4%BA%BA%E8%B3%87%E6%96%99" class="hash-link" aria-label="Direct link to ✅ 修改個人資料" title="Direct link to ✅ 修改個人資料">​</a></h2>
+<p>按下「修改個人資料」後，會跳出一個簡潔又美觀的編輯畫面，你可以：</p>
+<ul>
+<li>更新你的姓名</li>
+<li>修改電話號碼</li>
+<li>更改 Email</li>
+<li>設定新密碼</li>
+</ul>
+<p>所有欄位都支援即時輸入，改好點一下「儲存」，就能立即更新。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-登出帳號">🚪 登出帳號<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/26/user-settings-and-logout#-%E7%99%BB%E5%87%BA%E5%B8%B3%E8%99%9F" class="hash-link" aria-label="Direct link to 🚪 登出帳號" title="Direct link to 🚪 登出帳號">​</a></h2>
+<p>點選「登出」就能立即安全離開系統，系統會自動清除登入資訊並導回登入畫面。不管你是開在瀏覽器還是 iframe 內，系統都會幫你判斷最適合的登出方式。</p>
+<hr>
+<p>這個新功能的目標是讓使用者更有掌控感，也簡化了管理帳號資訊的流程。如果你是管理者，也能確保使用者能隨時自行更新資料、提升資訊正確性與使用便利性。</p>
+<p>🔐 <strong>我們沒有揭露任何內部安全機制或技術細節，只專注於使用者體驗與操作流程。</strong></p>
+<hr>
+<p>快登入系統試試看，點一下自己的名字，體驗一下這次的小升級吧！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[eForm2 與 ZetaFrame 新功能簡介：更自由的表單操作體驗！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update</guid>
+            <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[🌟 讓表單自由嵌入！支援 iFrame 並加強安全性]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-讓表單自由嵌入支援-iframe-並加強安全性">🌟 讓表單自由嵌入！支援 iFrame 並加強安全性<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update#-%E8%AE%93%E8%A1%A8%E5%96%AE%E8%87%AA%E7%94%B1%E5%B5%8C%E5%85%A5%E6%94%AF%E6%8F%B4-iframe-%E4%B8%A6%E5%8A%A0%E5%BC%B7%E5%AE%89%E5%85%A8%E6%80%A7" class="hash-link" aria-label="Direct link to 🌟 讓表單自由嵌入！支援 iFrame 並加強安全性" title="Direct link to 🌟 讓表單自由嵌入！支援 iFrame 並加強安全性">​</a></h2>
+<p>ZetaFrame 現在可透過 <code>iframe</code> 嵌入 eForm2 表單頁面，只要在 <code>appsettings.json</code> 中設定 <code>eForm2.Url</code> 與 <code>eForm2Api.Url</code>，系統就能自動連接並取得表單結構，動態產生導覽選單，還能透過路由 <code>/form/{formId}</code> 嵌入指定表單，讓你可以自由整合不同系統或嵌入至其他平台使用。</p>
+<blockquote>
+<p>✅ 同時支援設定 <code>AllowedIframeOrigins</code>，避免不明網域嵌入，強化嵌入安全性。</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-功能設定超細緻自由控制-ui-行為">🧩 功能設定超細緻，自由控制 UI 行為<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update#-%E5%8A%9F%E8%83%BD%E8%A8%AD%E5%AE%9A%E8%B6%85%E7%B4%B0%E7%B7%BB%E8%87%AA%E7%94%B1%E6%8E%A7%E5%88%B6-ui-%E8%A1%8C%E7%82%BA" class="hash-link" aria-label="Direct link to 🧩 功能設定超細緻，自由控制 UI 行為" title="Direct link to 🧩 功能設定超細緻，自由控制 UI 行為">​</a></h2>
+<p>你可以透過 <code>FormSetting</code> 設定各種 UI 行為，依需求開關：</p>
+<ul>
+<li><code>EnableSubmitButton</code>: 顯示或隱藏「送出」按鈕。</li>
+<li><code>EnableDeleteButton</code>: 是否允許使用者刪除表單。</li>
+<li><code>IsToolbarAtTop</code>: 底部工具列是否移至頂部。</li>
+</ul>
+<p>另外在 <code>FormFrame</code>（iframe 表單主頁）也能控制：</p>
+<ul>
+<li><code>EnableBackButton</code>: 顯示返回上一頁按鈕。</li>
+<li><code>EnableFormSwitcher</code>: 開啟下拉選單切換其他表單。</li>
+<li><code>EnableColumnsButton</code>: 控制顯示幾個子表單欄位。</li>
+<li><code>EnablePrintMainFormButton</code>: 是否提供主表單列印功能。</li>
+</ul>
+<p>這些細節都可以 per form 自訂，非常適合企業內部不同部門或使用情境彈性設定！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-全新-submitform-訊息監聽支援跨窗控制送出">🚀 全新 submitForm 訊息監聽！支援跨窗控制送出<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update#-%E5%85%A8%E6%96%B0-submitform-%E8%A8%8A%E6%81%AF%E7%9B%A3%E8%81%BD%E6%94%AF%E6%8F%B4%E8%B7%A8%E7%AA%97%E6%8E%A7%E5%88%B6%E9%80%81%E5%87%BA" class="hash-link" aria-label="Direct link to 🚀 全新 submitForm 訊息監聽！支援跨窗控制送出" title="Direct link to 🚀 全新 submitForm 訊息監聽！支援跨窗控制送出">​</a></h2>
+<p>現在，只要在外部系統透過 JavaScript <code>postMessage</code> 傳送以下訊息：</p>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token dom variable" style="color:#36acaa">window</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">postMessage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> </span><span class="token literal-property property" style="color:#36acaa">action</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"submitForm"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"*"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>內嵌的表單頁面就會自動送出！無需使用者點擊按鈕，非常適合自動化流程、複合操作流程中使用。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-開發者友善介接簡單">🛠 開發者友善，介接簡單<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update#-%E9%96%8B%E7%99%BC%E8%80%85%E5%8F%8B%E5%96%84%E4%BB%8B%E6%8E%A5%E7%B0%A1%E5%96%AE" class="hash-link" aria-label="Direct link to 🛠 開發者友善，介接簡單" title="Direct link to 🛠 開發者友善，介接簡單">​</a></h2>
+<p>在 ZetaFrame 的 <code>Program.cs</code> 裡已預設將 <code>ApiSecretKey</code> 設為 HTTP 標頭，無需手動每次設定；此外也透過 <code>.csproj</code> 引用共用的 <code>eForm2Lib</code> 和 <code>eForm2Common</code>，減少耦合與重複撰寫。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-還有更多">🧪 還有更多：<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/15/eform2-iframe-control-update#-%E9%82%84%E6%9C%89%E6%9B%B4%E5%A4%9A" class="hash-link" aria-label="Direct link to 🧪 還有更多：" title="Direct link to 🧪 還有更多：">​</a></h2>
+<ul>
+<li>UI 圖示加入動畫效果，例如 tab 被 AI 修改過時閃爍提醒。</li>
+<li>提供每個 tab 編輯、刪除功能（限擁有 editor 權限的使用者）。</li>
+<li>提供 json 檢視與 tab 新增／刪除功能（編輯模式限定）。</li>
+</ul>
+<hr>
+<p>你還沒用過 eForm2 嗎？或許現在就是導入自動化表單的最佳時機！<br>
+<!-- -->整合性強、擴充彈性高、開箱就能用。</p>
+<hr>
+<p>如需更進階客製需求，歡迎聯絡我們！👨‍💻</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[Fyro 開發日誌：API 穩定性與表單設計優化雙出擊！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates</guid>
+            <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近我們在 Fyro 的開發上做了一些重要的更新，這次要來和大家分享幾個值得注意的亮點～如果你是開發者或表單設計者，這次的更新你一定不能錯過！]]></description>
+            <content:encoded><![CDATA[<p>最近我們在 Fyro 的開發上做了一些重要的更新，這次要來和大家分享幾個值得注意的亮點～如果你是開發者或表單設計者，這次的更新你一定不能錯過！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-api-更新沒資料也不會爆炸">✅ API 更新：沒資料也不會爆炸！<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-api-%E6%9B%B4%E6%96%B0%E6%B2%92%E8%B3%87%E6%96%99%E4%B9%9F%E4%B8%8D%E6%9C%83%E7%88%86%E7%82%B8" class="hash-link" aria-label="Direct link to ✅ API 更新：沒資料也不會爆炸！" title="Direct link to ✅ API 更新：沒資料也不會爆炸！">​</a></h2>
+<p>我們調整了所有與 <code>GetDataAsync</code> 有關的 API 回傳邏輯。現在只要找不到資料，系統就會友善地回傳 <code>404 Not Found</code>，不會再拋出一大串錯誤訊息讓人心情複雜。這個改變涵蓋了：</p>
+<ul>
+<li>各種資料來源（ElasticSearch、FileSystem、MongoDB、SQLServer、Oracle）</li>
+<li>各種 API：包括文件、欄位、段落、Schema 結構、驗證邏輯等等</li>
+</ul>
+<p>這樣的調整讓前端或串接其他服務的開發者，不再需要額外處理例外，整體開發流程更順手、更直覺！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-表單設計體驗再進化">🧰 表單設計體驗再進化<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-%E8%A1%A8%E5%96%AE%E8%A8%AD%E8%A8%88%E9%AB%94%E9%A9%97%E5%86%8D%E9%80%B2%E5%8C%96" class="hash-link" aria-label="Direct link to 🧰 表單設計體驗再進化" title="Direct link to 🧰 表單設計體驗再進化">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-區塊元件新增對齊方式">🎨 區塊元件新增「對齊方式」<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-%E5%8D%80%E5%A1%8A%E5%85%83%E4%BB%B6%E6%96%B0%E5%A2%9E%E5%B0%8D%E9%BD%8A%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to 🎨 區塊元件新增「對齊方式」" title="Direct link to 🎨 區塊元件新增「對齊方式」">​</a></h3>
+<p>設計表單時，你可以針對每個區塊選擇對齊方式（靠左、置中、靠右），不再只能靠 CSS 硬改，讓你打造更靈活、更符合品牌風格的版面。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-select-下拉選單智慧寬度">📐 Select 下拉選單智慧寬度<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-select-%E4%B8%8B%E6%8B%89%E9%81%B8%E5%96%AE%E6%99%BA%E6%85%A7%E5%AF%AC%E5%BA%A6" class="hash-link" aria-label="Direct link to 📐 Select 下拉選單智慧寬度" title="Direct link to 📐 Select 下拉選單智慧寬度">​</a></h3>
+<p>我們新增了動態估算選項寬度的機制，下拉選單會自動依據選項字數調整寬度，看起來就是剛剛好，體驗 up！</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-label-與文字在不同螢幕尺寸下顯示最佳化">🧪 Label 與文字在不同螢幕尺寸下顯示最佳化<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-label-%E8%88%87%E6%96%87%E5%AD%97%E5%9C%A8%E4%B8%8D%E5%90%8C%E8%9E%A2%E5%B9%95%E5%B0%BA%E5%AF%B8%E4%B8%8B%E9%A1%AF%E7%A4%BA%E6%9C%80%E4%BD%B3%E5%8C%96" class="hash-link" aria-label="Direct link to 🧪 Label 與文字在不同螢幕尺寸下顯示最佳化" title="Direct link to 🧪 Label 與文字在不同螢幕尺寸下顯示最佳化">​</a></h3>
+<p>在手機版與桌機版上，label 的間距與對齊都經過細膩調整，讓表單看起來更整齊、更專業。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-更多-tailwind-設定支援">🔧 更多 Tailwind 設定支援<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-%E6%9B%B4%E5%A4%9A-tailwind-%E8%A8%AD%E5%AE%9A%E6%94%AF%E6%8F%B4" class="hash-link" aria-label="Direct link to 🔧 更多 Tailwind 設定支援" title="Direct link to 🔧 更多 Tailwind 設定支援">​</a></h3>
+<p>我們加入了更多寬度與最大寬度的自訂設定，例如：<code>w-135px</code>, <code>max-w-405px</code>，設計師有更多空間可以揮灑！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-其他修正">🧹 其他修正<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-%E5%85%B6%E4%BB%96%E4%BF%AE%E6%AD%A3" class="hash-link" aria-label="Direct link to 🧹 其他修正" title="Direct link to 🧹 其他修正">​</a></h2>
+<ul>
+<li>🗑️ 移除了過去內建的 <code>ApiKeyAuthenticationHandler</code>，認證邏輯未來將改用統一的集中機制，維護更簡單、使用更安全。</li>
+<li>🐞 修正了某些 FileSystem 下的資料排序與條件篩選的潛在錯誤。</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-結語">📌 結語<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/09/api-and-form-alignment-updates#-%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="Direct link to 📌 結語" title="Direct link to 📌 結語">​</a></h2>
+<p>這次的更新，讓 Fyro 在「穩定性」與「靈活性」兩端都更進一步。不論你是在開發 API 還是在設計表單，我們都希望你能感受到這些微小但重要的進化。</p>
+<p>有任何建議或想法，歡迎和我們分享，下一版可能就會納入你的靈感喔 💡</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[讓公式欄位更精準！下拉選單的新進化]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/07/formula-select-enhancement</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/07/formula-select-enhancement</guid>
+            <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[今天 fyro.ai 在「公式欄位」這塊又邁出一大步！]]></description>
+            <content:encoded><![CDATA[<p>今天 fyro.ai 在「公式欄位」這塊又邁出一大步！</p>
+<p>我們針對下拉選單（select）欄位進行了強化，讓它不只是選項的展示，還能支援背後更複雜的運算邏輯。</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-什麼是公式值">🎯 什麼是公式值？<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/07/formula-select-enhancement#-%E4%BB%80%E9%BA%BC%E6%98%AF%E5%85%AC%E5%BC%8F%E5%80%BC" class="hash-link" aria-label="Direct link to 🎯 什麼是公式值？" title="Direct link to 🎯 什麼是公式值？">​</a></h3>
+<p>有些表單會根據使用者的選項自動計算分數、金額、加總等等，例如「你喜歡這個產品的程度？」選項從「非常滿意」到「非常不滿意」，背後其實對應了數字（例如 5~1），而這些數字會被拿去做加總或加權計算。</p>
+<p>以前這些公式值（formulaValues）是個別寫死的，現在，我們讓它們更有彈性——每個選項都可以對應自己的計算用數據，而且系統能正確理解它們的數據型別（數字或文字），這讓整體計算更準確。</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-系統會聰明辨識你要算什麼">🧠 系統會聰明辨識你要算什麼<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/07/formula-select-enhancement#-%E7%B3%BB%E7%B5%B1%E6%9C%83%E8%81%B0%E6%98%8E%E8%BE%A8%E8%AD%98%E4%BD%A0%E8%A6%81%E7%AE%97%E4%BB%80%E9%BA%BC" class="hash-link" aria-label="Direct link to 🧠 系統會聰明辨識你要算什麼" title="Direct link to 🧠 系統會聰明辨識你要算什麼">​</a></h3>
+<p>當使用者選擇某個選項時，系統會即時判斷那個選項的「公式值」，並確保公式在使用它時能得到正確的運算結果。例如，你可以用 <code>q1[0] + q2[0]</code> 這樣的寫法來組公式，系統知道 <code>[0]</code> 是要拿第一個公式值來算。</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-設計表單的時候也更貼心了">📌 設計表單的時候也更貼心了<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/07/formula-select-enhancement#-%E8%A8%AD%E8%A8%88%E8%A1%A8%E5%96%AE%E7%9A%84%E6%99%82%E5%80%99%E4%B9%9F%E6%9B%B4%E8%B2%BC%E5%BF%83%E4%BA%86" class="hash-link" aria-label="Direct link to 📌 設計表單的時候也更貼心了" title="Direct link to 📌 設計表單的時候也更貼心了">​</a></h3>
+<p>我們也更新了 AI 協作提示（Prompt），避免 AI 在產出表單格式時遺漏必要資訊，像是 <code>name</code> 屬性。這樣一來，不管是 AI 還是你自己手動設計，產出的格式都會是正確的，不會出現欄位無法識別的問題。</p>
+<hr>
+<p>這些更新是為了讓公式欄位更直覺、更強大，不只是開發者方便，使用者在填表的體驗也會因此更加流暢！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[讓表單操作更直覺：UI 微調與輸入欄位的智慧強化]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks</guid>
+            <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這幾天，我對 fyro.ai 裡的幾個互動細節做了不少微調，主要是針對使用者在編輯或填寫表單時的整體體驗。雖然每一項變動都不大，但加起來卻讓介面更順手、更貼近日常操作習慣。]]></description>
+            <content:encoded><![CDATA[<p>這幾天，我對 fyro.ai 裡的幾個互動細節做了不少微調，主要是針對使用者在編輯或填寫表單時的整體體驗。雖然每一項變動都不大，但加起來卻讓介面更順手、更貼近日常操作習慣。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-給外星人也懂的說明">✅ 給外星人也懂的說明<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks#-%E7%B5%A6%E5%A4%96%E6%98%9F%E4%BA%BA%E4%B9%9F%E6%87%82%E7%9A%84%E8%AA%AA%E6%98%8E" class="hash-link" aria-label="Direct link to ✅ 給外星人也懂的說明" title="Direct link to ✅ 給外星人也懂的說明">​</a></h3>
+<p>我們的 AI 協助填表功能「AI 外星人」，現在畫面上的文字說明更加親切、也更貼近功能本身。原本的標題「AI 外星人」雖然有趣，但不太容易理解它到底要幹嘛。現在換成了「AI外星人幫我寫」，讓人一眼就能明白用途。</p>
+<p>輸入提示也做了對應調整，比如「請貼上圖片或輸入文字...」現在變成：「請告訴外星人你想填入表單的內容，讓外星人幫你填入適當的欄位...」這些小調整都是希望能更自然地引導使用者互動。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-表單設計更聰明了">🧠 表單設計更聰明了<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks#-%E8%A1%A8%E5%96%AE%E8%A8%AD%E8%A8%88%E6%9B%B4%E8%81%B0%E6%98%8E%E4%BA%86" class="hash-link" aria-label="Direct link to 🧠 表單設計更聰明了" title="Direct link to 🧠 表單設計更聰明了">​</a></h3>
+<p>在表單設計頁面中，我新增了一個設定欄位內容型別（InputType）的選項。也就是說，開發者現在可以指定某個欄位是「文字」、「電話」、「email」、「日期」...等等不同的輸入類型。這樣不僅可以幫助瀏覽器自動帶出適合的輸入介面，也能在後端進行更準確的驗證處理。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-儲存按鈕永遠找得到">💾 儲存按鈕永遠找得到<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks#-%E5%84%B2%E5%AD%98%E6%8C%89%E9%88%95%E6%B0%B8%E9%81%A0%E6%89%BE%E5%BE%97%E5%88%B0" class="hash-link" aria-label="Direct link to 💾 儲存按鈕永遠找得到" title="Direct link to 💾 儲存按鈕永遠找得到">​</a></h3>
+<p>表單設計頁面的儲存按鈕，之前容易被長內容或其他元件推得老遠，現在我把它「釘」在了右邊，讓它永遠出現在頁面可見區塊的右方。這樣一來，即使頁面再怎麼複雜，使用者都能一眼看到並方便地儲存編輯結果。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-主題色與樣式細節也沒放過">🎨 主題色與樣式細節也沒放過<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/05/form-ui-micro-tweaks#-%E4%B8%BB%E9%A1%8C%E8%89%B2%E8%88%87%E6%A8%A3%E5%BC%8F%E7%B4%B0%E7%AF%80%E4%B9%9F%E6%B2%92%E6%94%BE%E9%81%8E" class="hash-link" aria-label="Direct link to 🎨 主題色與樣式細節也沒放過" title="Direct link to 🎨 主題色與樣式細節也沒放過">​</a></h3>
+<p>深海主題（deep-sea-dawn）背景顏色也做了微調，讓整體配色更穩重、看起來更舒服。搜尋列樣式也經過重新設計，讓欄位與篩選條件呈現得更整齊清晰。</p>
+<hr>
+<p>這些微調，雖然都是細節，但對整體體驗的提升是加乘的。未來還會持續觀察大家的使用情況，再根據回饋來優化設計。你也有任何建議嗎？歡迎留言或私訊我！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[好用、好看又好懂：fyro 使用體驗再升級！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update</guid>
+            <pubDate>Fri, 02 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週 fyro.ai 推出了多項讓你「感覺更好」的更新，從畫面整潔度、互動方式，到輔助使用者的設計，通通照顧到了！]]></description>
+            <content:encoded><![CDATA[<p>這週 fyro.ai 推出了多項讓你「感覺更好」的更新，從畫面整潔度、互動方式，到輔助使用者的設計，通通照顧到了！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-畫面清爽再清爽">🧼 畫面清爽再清爽<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update#-%E7%95%AB%E9%9D%A2%E6%B8%85%E7%88%BD%E5%86%8D%E6%B8%85%E7%88%BD" class="hash-link" aria-label="Direct link to 🧼 畫面清爽再清爽" title="Direct link to 🧼 畫面清爽再清爽">​</a></h2>
+<ul>
+<li>表單欄位之間的距離更剛好，看起來不擠也不空</li>
+<li>顏色對比調整，重要的東西你一定會先看到</li>
+<li>輸入欄位的標籤與內容更明確，不再搞混</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-自動欄位輔助更聰明">🧩 自動欄位輔助更聰明<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update#-%E8%87%AA%E5%8B%95%E6%AC%84%E4%BD%8D%E8%BC%94%E5%8A%A9%E6%9B%B4%E8%81%B0%E6%98%8E" class="hash-link" aria-label="Direct link to 🧩 自動欄位輔助更聰明" title="Direct link to 🧩 自動欄位輔助更聰明">​</a></h2>
+<ul>
+<li>輸入部分識別資料，系統就能自動判斷對應欄位</li>
+<li>填寫時自動帶出你常用的選項，例如部門、階段</li>
+<li>誤填格式會即時跳出提示，填表不再怕按下送出才發現錯</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-支援無障礙使用者">👀 支援無障礙使用者<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update#-%E6%94%AF%E6%8F%B4%E7%84%A1%E9%9A%9C%E7%A4%99%E4%BD%BF%E7%94%A8%E8%80%85" class="hash-link" aria-label="Direct link to 👀 支援無障礙使用者" title="Direct link to 👀 支援無障礙使用者">​</a></h2>
+<p>fyro.ai 現在更友善視覺使用者需求：</p>
+<ul>
+<li>所有互動元件支援鍵盤操作</li>
+<li>語意化標籤，方便螢幕閱讀器辨識欄位</li>
+<li>更清楚的聚焦指示，讓你知道你現在在哪一欄</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-表單內容查找更直覺">📄 表單內容查找更直覺<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update#-%E8%A1%A8%E5%96%AE%E5%85%A7%E5%AE%B9%E6%9F%A5%E6%89%BE%E6%9B%B4%E7%9B%B4%E8%A6%BA" class="hash-link" aria-label="Direct link to 📄 表單內容查找更直覺" title="Direct link to 📄 表單內容查找更直覺">​</a></h2>
+<ul>
+<li>表格中欄位內容長度自動調整，重點不會被截斷</li>
+<li>可以直接展開欄位看完整文字</li>
+<li>點擊一筆資料可以馬上看到詳細內容</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-功能小改動但體驗大不同">📦 功能小改動，但體驗大不同<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/05/02/user-experience-and-accessibility-update#-%E5%8A%9F%E8%83%BD%E5%B0%8F%E6%94%B9%E5%8B%95%E4%BD%86%E9%AB%94%E9%A9%97%E5%A4%A7%E4%B8%8D%E5%90%8C" class="hash-link" aria-label="Direct link to 📦 功能小改動，但體驗大不同" title="Direct link to 📦 功能小改動，但體驗大不同">​</a></h2>
+<ul>
+<li>圖片上傳後自動預覽，貼圖不再心驚驚</li>
+<li>多段欄位支援整串貼上，速度快兩倍</li>
+<li>自動記住上次填寫的值，不用每次重來</li>
+</ul>
+<hr>
+<p>fyro 不只是表單工具，而是幫你處理複雜資料的超級助手。</p>
+<p>這一波更新，就是要讓每個使用者——不管是填表的你、設計的你，還是管理資料的你——都能更輕鬆、更自在地用 fyro 做事。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>使用者體驗</category>
+            <category>無障礙</category>
+            <category>表單優化</category>
+            <category>視覺設計</category>
+        </item>
+        <item>
+            <title><![CDATA[使用體驗再升級！自動欄位、自動跳過提醒、更清爽的表單]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui</guid>
+            <pubDate>Mon, 28 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[在這一波更新中，我們針對資料結構、表單載入邏輯，以及使用者體驗進行了一系列細節調整，讓整個 fyro 使用流程更自然、更省心。]]></description>
+            <content:encoded><![CDATA[<p>在這一波更新中，我們針對資料結構、表單載入邏輯，以及使用者體驗進行了一系列細節調整，讓整個 fyro 使用流程更自然、更省心。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-metadata-自動補齊設計表單更直覺">🧠 metadata 自動補齊，設計表單更直覺<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui#-metadata-%E8%87%AA%E5%8B%95%E8%A3%9C%E9%BD%8A%E8%A8%AD%E8%A8%88%E8%A1%A8%E5%96%AE%E6%9B%B4%E7%9B%B4%E8%A6%BA" class="hash-link" aria-label="Direct link to 🧠 metadata 自動補齊，設計表單更直覺" title="Direct link to 🧠 metadata 自動補齊，設計表單更直覺">​</a></h2>
+<p>每筆資料現在會根據 DataKey 自動生成 metadata：</p>
+<ul>
+<li><code>metadata_DataKey1</code> 到 <code>metadata_DataKey3</code> 自動拆解 DataKey 結構</li>
+<li>自動填入 Store 與 Department</li>
+<li>自動附上建立時間 <code>metadata_CreateTime</code></li>
+</ul>
+<p>你再也不需要手動輸入這些欄位，系統會幫你處理好，讓搜尋與彙整更容易！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-搜尋體驗支援-elasticsearch-與-mongodb">🧩 搜尋體驗：支援 Elasticsearch 與 MongoDB<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui#-%E6%90%9C%E5%B0%8B%E9%AB%94%E9%A9%97%E6%94%AF%E6%8F%B4-elasticsearch-%E8%88%87-mongodb" class="hash-link" aria-label="Direct link to 🧩 搜尋體驗：支援 Elasticsearch 與 MongoDB" title="Direct link to 🧩 搜尋體驗：支援 Elasticsearch 與 MongoDB">​</a></h2>
+<p>不管你的資料儲存在哪裡，搜尋邏輯都一致：</p>
+<ul>
+<li>支援 term / range / bool 等多種查詢條件</li>
+<li>keyword 欄位自動轉換</li>
+<li>bool 查詢 now 支援 must, must_not, filter 三種方式</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-自動判斷資料來源不再多問一次">✅ 自動判斷資料來源，不再多問一次<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui#-%E8%87%AA%E5%8B%95%E5%88%A4%E6%96%B7%E8%B3%87%E6%96%99%E4%BE%86%E6%BA%90%E4%B8%8D%E5%86%8D%E5%A4%9A%E5%95%8F%E4%B8%80%E6%AC%A1" class="hash-link" aria-label="Direct link to ✅ 自動判斷資料來源，不再多問一次" title="Direct link to ✅ 自動判斷資料來源，不再多問一次">​</a></h2>
+<p>當你打開一張表單，若該資料已經存在，就不會再跳出「是否要帶入整合資料」的提示。這讓整個填寫流程更加流暢，不再被重複詢問打斷。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-select-元件去除多餘邊界介面更簡潔">🧼 Select 元件去除多餘邊界，介面更簡潔<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui#-select-%E5%85%83%E4%BB%B6%E5%8E%BB%E9%99%A4%E5%A4%9A%E9%A4%98%E9%82%8A%E7%95%8C%E4%BB%8B%E9%9D%A2%E6%9B%B4%E7%B0%A1%E6%BD%94" class="hash-link" aria-label="Direct link to 🧼 Select 元件去除多餘邊界，介面更簡潔" title="Direct link to 🧼 Select 元件去除多餘邊界，介面更簡潔">​</a></h2>
+<p>我們移除了 Select 欄位左側的固定空白，讓整體表單在行動裝置上也更對齊、更好看！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-token-儲存更聰明">🍪 Token 儲存更聰明<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/28/enhanced-data-logic-and-ui#-token-%E5%84%B2%E5%AD%98%E6%9B%B4%E8%81%B0%E6%98%8E" class="hash-link" aria-label="Direct link to 🍪 Token 儲存更聰明" title="Direct link to 🍪 Token 儲存更聰明">​</a></h2>
+<p>登入後的 cookies 現在會自動設定為 7 天有效期，不用每次重新登入，也能保持適當的安全性。</p>
+<hr>
+<p>這些看起來像是小改動，卻大大提升了設計者與填寫者的體驗。fyro 持續在細節處打磨，只為了讓你「做得少，用得多」。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單優化</category>
+            <category>UI改進</category>
+            <category>metadata</category>
+            <category>體驗設計</category>
+        </item>
+        <item>
+            <title><![CDATA[表單欄位升級！輸入更聰明、顯示更清楚]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements</guid>
+            <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這次 fyro.ai 團隊針對欄位輸入與資料顯示做了大量優化，特別是針對多段式欄位、欄位狀態標示、以及資料清單的呈現方式，全面提升可用性與流暢度。]]></description>
+            <content:encoded><![CDATA[<p>這次 fyro.ai 團隊針對欄位輸入與資料顯示做了大量優化，特別是針對多段式欄位、欄位狀態標示、以及資料清單的呈現方式，全面提升可用性與流暢度。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-多段識別欄位更好懂">🧩 多段識別欄位更好懂<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements#-%E5%A4%9A%E6%AE%B5%E8%AD%98%E5%88%A5%E6%AC%84%E4%BD%8D%E6%9B%B4%E5%A5%BD%E6%87%82" class="hash-link" aria-label="Direct link to 🧩 多段識別欄位更好懂" title="Direct link to 🧩 多段識別欄位更好懂">​</a></h2>
+<p>以往我們常遇到一串「識別碼」拆成好幾段，這次我們做了幾項貼心更新：</p>
+<ul>
+<li>每段欄位都有清楚標籤名稱</li>
+<li>必填的欄位會高亮提示</li>
+<li>有錯誤會即時標示，不怕誤填或漏填</li>
+</ul>
+<p>系統還會根據不同欄位內容自動格式化，像是日期欄位會出現選擇器。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-欄位狀態一目了然">👀 欄位狀態一目了然<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements#-%E6%AC%84%E4%BD%8D%E7%8B%80%E6%85%8B%E4%B8%80%E7%9B%AE%E4%BA%86%E7%84%B6" class="hash-link" aria-label="Direct link to 👀 欄位狀態一目了然" title="Direct link to 👀 欄位狀態一目了然">​</a></h2>
+<p>現在每個欄位都可以顯示自己的狀態：</p>
+<ul>
+<li>✅ 已填寫：顯示綠色標記</li>
+<li>🟡 尚未填寫：顯示提醒</li>
+<li>🔒 鎖定欄位：無法編輯但可以查看</li>
+</ul>
+<p>這對使用者來說非常有幫助，不用再一個一個點進去檢查填了沒。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-資料表格的欄位可展開">📋 資料表格的欄位可展開<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements#-%E8%B3%87%E6%96%99%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%AC%84%E4%BD%8D%E5%8F%AF%E5%B1%95%E9%96%8B" class="hash-link" aria-label="Direct link to 📋 資料表格的欄位可展開" title="Direct link to 📋 資料表格的欄位可展開">​</a></h2>
+<p>在資料總覽畫面（FormGrid）中，欄位變得更容易理解：</p>
+<ul>
+<li>每筆資料的所有欄位可點開檢視完整內容</li>
+<li>對於較長的欄位資料，自動縮排與斷行</li>
+<li>特殊欄位（如：Textarea, File）可以預覽內容或下載</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-其他貼心更新">✨ 其他貼心更新<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/23/form-enhancements#-%E5%85%B6%E4%BB%96%E8%B2%BC%E5%BF%83%E6%9B%B4%E6%96%B0" class="hash-link" aria-label="Direct link to ✨ 其他貼心更新" title="Direct link to ✨ 其他貼心更新">​</a></h2>
+<ul>
+<li>貼上圖片時自動顯示縮圖</li>
+<li>多欄位連動驗證更準確</li>
+<li>新增欄位編輯歷程記錄，設計者更安心</li>
+</ul>
+<hr>
+<p>fyro.ai 的設計原則就是「你越不需要學，它越強大」。</p>
+<p>希望這些改進讓你在填寫與設計表單時，感受到一種默默被照顧的舒服感 😊</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單設計</category>
+            <category>輸入體驗</category>
+            <category>多段資料</category>
+            <category>介面優化</category>
+        </item>
+        <item>
+            <title><![CDATA[訪客模式啟動、自動填好部門、表單編輯更順了！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix</guid>
+            <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週我們做了一系列讓 fyro 使用起來更順手的更新，尤其對初次體驗的使用者、表單設計者特別友善。]]></description>
+            <content:encoded><![CDATA[<p>這週我們做了一系列讓 fyro 使用起來更順手的更新，尤其對初次體驗的使用者、表單設計者特別友善。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-不用註冊也能體驗訪客模式上線">🙋‍♂️ 不用註冊也能體驗！訪客模式上線<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix#%EF%B8%8F-%E4%B8%8D%E7%94%A8%E8%A8%BB%E5%86%8A%E4%B9%9F%E8%83%BD%E9%AB%94%E9%A9%97%E8%A8%AA%E5%AE%A2%E6%A8%A1%E5%BC%8F%E4%B8%8A%E7%B7%9A" class="hash-link" aria-label="Direct link to 🙋‍♂️ 不用註冊也能體驗！訪客模式上線" title="Direct link to 🙋‍♂️ 不用註冊也能體驗！訪客模式上線">​</a></h2>
+<p>現在你可以「以訪客身分繼續」，快速體驗 fyro 表單系統。</p>
+<ul>
+<li>不需要輸入帳號密碼</li>
+<li>會自動給你一組匿名身份 ID</li>
+<li>每次登入都能暫時使用系統功能</li>
+<li>資料不會影響正式帳號使用者</li>
+</ul>
+<p>這對新手體驗或快速 demo 都超方便！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-身分限制保護開啟中">🔐 身分限制保護開啟中<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix#-%E8%BA%AB%E5%88%86%E9%99%90%E5%88%B6%E4%BF%9D%E8%AD%B7%E9%96%8B%E5%95%9F%E4%B8%AD" class="hash-link" aria-label="Direct link to 🔐 身分限制保護開啟中" title="Direct link to 🔐 身分限制保護開啟中">​</a></h2>
+<p>雖然訪客能使用 fyro，但某些功能會自動受限，例如表單設計、資料維護等會跳轉回登入畫面。這確保資料安全，也保障正式使用者權限。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-表單識別欄位自動填好">🧠 表單識別欄位，自動填好！<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix#-%E8%A1%A8%E5%96%AE%E8%AD%98%E5%88%A5%E6%AC%84%E4%BD%8D%E8%87%AA%E5%8B%95%E5%A1%AB%E5%A5%BD" class="hash-link" aria-label="Direct link to 🧠 表單識別欄位，自動填好！" title="Direct link to 🧠 表單識別欄位，自動填好！">​</a></h2>
+<p>登入後，我們會依據你的身分（像是 Store 或 Department）自動填好相關欄位：</p>
+<ul>
+<li>不需要自己輸入</li>
+<li>也不能被誤改</li>
+<li>減少錯誤與重複動作</li>
+</ul>
+<p>讓你開啟表單就能專注在內容，不用再反覆選欄位。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-表單設計時識別碼也更準確">✏️ 表單設計時，識別碼也更準確<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/11/guest-mode-form-fix#%EF%B8%8F-%E8%A1%A8%E5%96%AE%E8%A8%AD%E8%A8%88%E6%99%82%E8%AD%98%E5%88%A5%E7%A2%BC%E4%B9%9F%E6%9B%B4%E6%BA%96%E7%A2%BA" class="hash-link" aria-label="Direct link to ✏️ 表單設計時，識別碼也更準確" title="Direct link to ✏️ 表單設計時，識別碼也更準確">​</a></h2>
+<p>過去在某些編輯情境下，DataKey 可能會判定錯誤導致顯示異常。這次我們修正了這個邏輯，讓進入編輯模式時判斷更精確，使用上更安心。</p>
+<hr>
+<p>這些都是細節上的打磨，卻能大幅提升你操作的流暢度。fyro 的核心理念就是讓工具變簡單，讓資料更好用。</p>
+<p>歡迎試試看訪客模式，一鍵體驗就上手 🎉</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單</category>
+            <category>使用者體驗</category>
+            <category>登入流程</category>
+            <category>身分識別</category>
+        </item>
+        <item>
+            <title><![CDATA[結構更清晰、畫面更簡潔，填表新體驗上線]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement</guid>
+            <pubDate>Mon, 07 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近我們在 fyro.ai 的表單填寫與資料結構上做了一些優化，讓你在輸入資料時更輕鬆、看資料時更清楚！]]></description>
+            <content:encoded><![CDATA[<p>最近我們在 fyro.ai 的表單填寫與資料結構上做了一些優化，讓你在輸入資料時更輕鬆、看資料時更清楚！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-結構清晰的輸入介面">🧩 結構清晰的輸入介面<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement#-%E7%B5%90%E6%A7%8B%E6%B8%85%E6%99%B0%E7%9A%84%E8%BC%B8%E5%85%A5%E4%BB%8B%E9%9D%A2" class="hash-link" aria-label="Direct link to 🧩 結構清晰的輸入介面" title="Direct link to 🧩 結構清晰的輸入介面">​</a></h2>
+<p>我們針對「識別資料」（像是姓名、部門、日期、階段）重新整理顯示方式：</p>
+<ul>
+<li>一行就能看到整組資料，不再分散顯示</li>
+<li>重點欄位用圖示標記，讓你一眼就能抓到重點</li>
+<li>設計上簡潔俐落，不會干擾你輸入資料</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-填表更順手">✍️ 填表更順手<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement#%EF%B8%8F-%E5%A1%AB%E8%A1%A8%E6%9B%B4%E9%A0%86%E6%89%8B" class="hash-link" aria-label="Direct link to ✍️ 填表更順手" title="Direct link to ✍️ 填表更順手">​</a></h2>
+<ul>
+<li>可以一次貼整串資料，例如 <code>王小明 行政部 2025/04/01 計畫審查</code>，系統會自動拆解並填入欄位</li>
+<li>即時提示格式錯誤、不合法值（像是錯誤日期），不會等你按儲存才出錯</li>
+<li>清楚顯示每段欄位代表的意思，減少填寫疑惑</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-看資料也更直覺">📋 看資料也更直覺<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement#-%E7%9C%8B%E8%B3%87%E6%96%99%E4%B9%9F%E6%9B%B4%E7%9B%B4%E8%A6%BA" class="hash-link" aria-label="Direct link to 📋 看資料也更直覺" title="Direct link to 📋 看資料也更直覺">​</a></h2>
+<ul>
+<li>在資料總覽（FormGrid）中，把常用的 DK 欄位（像 DK1, DK2）整理在一列</li>
+<li>點開每筆資料就能看到詳細結構與標籤名稱</li>
+<li>支援標示重要欄位，例如「收件日期」、「階段說明」</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-智慧小細節">🧠 智慧小細節<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/07/data-structure-ui-enhancement#-%E6%99%BA%E6%85%A7%E5%B0%8F%E7%B4%B0%E7%AF%80" class="hash-link" aria-label="Direct link to 🧠 智慧小細節" title="Direct link to 🧠 智慧小細節">​</a></h2>
+<ul>
+<li>記住你最近使用的部門與常用欄位，下次自動預設</li>
+<li>自動格式化日期與數字，輸入再快也不怕錯</li>
+</ul>
+<hr>
+<p>這些更新雖然安靜地藏在你日常操作中，但每一筆都能讓你填得更準、找得更快。</p>
+<p>如果你注意到畫面變順、填寫變直覺——那就是 fyro 幫你悄悄升級的證明 😊</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單設計</category>
+            <category>輸入體驗</category>
+            <category>使用者介面</category>
+            <category>資料結構</category>
+        </item>
+        <item>
+            <title><![CDATA[輸入資料更清楚，系統更聰明了！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation</guid>
+            <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[我們在 fyro.ai 上做了一些看起來不大，但用起來很有感的改進，特別是針對你在填寫「識別資料」的時候。]]></description>
+            <content:encoded><![CDATA[<p>我們在 fyro.ai 上做了一些看起來不大，但用起來很有感的改進，特別是針對你在填寫「識別資料」的時候。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-輸入欄位變聰明了">🧩 輸入欄位變聰明了！<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation#-%E8%BC%B8%E5%85%A5%E6%AC%84%E4%BD%8D%E8%AE%8A%E8%81%B0%E6%98%8E%E4%BA%86" class="hash-link" aria-label="Direct link to 🧩 輸入欄位變聰明了！" title="Direct link to 🧩 輸入欄位變聰明了！">​</a></h2>
+<p>以前輸入識別資料可能會讓你搞不清楚欄位要填什麼。現在不一樣了！</p>
+<p>我們讓系統知道這些欄位是什麼意思：</p>
+<ul>
+<li>「身分證字號」</li>
+<li>「就醫序號」</li>
+<li>「項次」</li>
+<li>「醫院名稱」</li>
+<li>「部門」</li>
+</ul>
+<p>這些名稱會清楚地出現在畫面上，讓你一看就懂，也不怕填錯。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-一邊輸入一邊幫你檢查">✅ 一邊輸入一邊幫你檢查<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation#-%E4%B8%80%E9%82%8A%E8%BC%B8%E5%85%A5%E4%B8%80%E9%82%8A%E5%B9%AB%E4%BD%A0%E6%AA%A2%E6%9F%A5" class="hash-link" aria-label="Direct link to ✅ 一邊輸入一邊幫你檢查" title="Direct link to ✅ 一邊輸入一邊幫你檢查">​</a></h2>
+<p>如果有欄位沒填，或是填了奇怪的符號，系統會馬上提醒你：</p>
+<ul>
+<li>哪些是「必填欄位」</li>
+<li>哪些輸入有誤</li>
+</ul>
+<p>你不用等送出後才發現錯誤，省下好多時間和重填的麻煩！</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-自動幫你帶資料">🔄 自動幫你帶資料<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation#-%E8%87%AA%E5%8B%95%E5%B9%AB%E4%BD%A0%E5%B8%B6%E8%B3%87%E6%96%99" class="hash-link" aria-label="Direct link to 🔄 自動幫你帶資料" title="Direct link to 🔄 自動幫你帶資料">​</a></h2>
+<p>只要你之前有填過某些資料（像是姓名、手機、公司），只要有對應的欄位，系統會自動幫你「帶入」進來，不用再重複輸入。</p>
+<p>真的很貼心 ❤️</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-查資料也更容易">🗂 查資料也更容易<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/04/02/datakey-structure-and-validation#-%E6%9F%A5%E8%B3%87%E6%96%99%E4%B9%9F%E6%9B%B4%E5%AE%B9%E6%98%93" class="hash-link" aria-label="Direct link to 🗂 查資料也更容易" title="Direct link to 🗂 查資料也更容易">​</a></h2>
+<p>我們在資料清單（像是歷史紀錄、資料表格）中，加入了你輸入的識別資訊，像是：</p>
+<ul>
+<li>DK1（第一段識別欄位）</li>
+<li>DK@1（第二段組合欄位）</li>
+</ul>
+<p>所以你現在可以更快速地看到自己填過的資料，也方便查找與管理。</p>
+<hr>
+<p>這些改變，讓 fyro.ai 的每次填寫都更順、更聰明、更安全。你只需要專注在內容，其他交給我們幫你處理就好。</p>
+<p>期待你下一次打開 fyro 表單時，能感受到這些用心設計的細節✨</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單</category>
+            <category>輸入驗證</category>
+            <category>資料一致性</category>
+            <category>Metadata</category>
+        </item>
+        <item>
+            <title><![CDATA[資料欄位更精準，操作畫面更清晰]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/03/27/metadata-ui-tweak-formgrid</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/03/27/metadata-ui-tweak-formgrid</guid>
+            <pubDate>Thu, 27 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這幾天持續優化 fyro.ai 的表單填寫體驗，包含欄位資料的精緻化處理與畫面細節調整，讓整體操作更直覺、易懂。]]></description>
+            <content:encoded><![CDATA[<p>這幾天持續優化 fyro.ai 的表單填寫體驗，包含欄位資料的精緻化處理與畫面細節調整，讓整體操作更直覺、易懂。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="更智慧的-metadata">更智慧的 Metadata<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/27/metadata-ui-tweak-formgrid#%E6%9B%B4%E6%99%BA%E6%85%A7%E7%9A%84-metadata" class="hash-link" aria-label="Direct link to 更智慧的 Metadata" title="Direct link to 更智慧的 Metadata">​</a></h2>
+<p>每次使用表單，系統會自動生成一筆記錄資訊，這次我們進一步讓這些資訊更完整，例如：</p>
+<ul>
+<li>可以解析資料主鍵（DataKey）中的語意</li>
+<li>自動帶出使用者名稱與真實姓名</li>
+<li>記錄表單 ID、時間戳、部門資訊等等</li>
+</ul>
+<p>這些資訊不會顯示在畫面上，但在背景中會協助記錄使用歷程與分析。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="畫面更新更舒適">畫面更新更舒適<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/27/metadata-ui-tweak-formgrid#%E7%95%AB%E9%9D%A2%E6%9B%B4%E6%96%B0%E6%9B%B4%E8%88%92%E9%81%A9" class="hash-link" aria-label="Direct link to 畫面更新更舒適" title="Direct link to 畫面更新更舒適">​</a></h2>
+<ul>
+<li>不同區塊之間增加空間，閱讀起來不再擁擠</li>
+<li>文字字體大小微調，標籤字變清楚了</li>
+<li>按鈕的配色統一使用主題色，視覺一致也更現代</li>
+<li>資料表格的顯示區域放大，閱讀時可以看到更多內容</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="新名稱formgrid">新名稱：FormGrid<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/27/metadata-ui-tweak-formgrid#%E6%96%B0%E5%90%8D%E7%A8%B1formgrid" class="hash-link" aria-label="Direct link to 新名稱：FormGrid" title="Direct link to 新名稱：FormGrid">​</a></h2>
+<p>原本叫做「SyncGrid」的頁面，現在我們改名為「FormGrid」，名稱上更貼近實際用途，也方便使用者理解。</p>
+<hr>
+<p>這些更新都是為了讓 fyro.ai 的互動性與易用性再提升一個層級。期待你在表單操作上的每一步都順暢又安心。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+        </item>
+        <item>
+            <title><![CDATA[API 安全升級：更安心、更放心的外部整合能力]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update</guid>
+            <pubDate>Mon, 24 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週 fyro.ai 針對 API 系統做了安全性與跨平台整合性的升級，目的是讓開發者在使用我們的表單與後端功能時，能夠更放心、更有彈性地擴展應用。]]></description>
+            <content:encoded><![CDATA[<p>這週 fyro.ai 針對 API 系統做了安全性與跨平台整合性的升級，目的是讓開發者在使用我們的表單與後端功能時，能夠更放心、更有彈性地擴展應用。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-所有-api-呼叫都經過身分驗證">🔐 所有 API 呼叫都經過身分驗證<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update#-%E6%89%80%E6%9C%89-api-%E5%91%BC%E5%8F%AB%E9%83%BD%E7%B6%93%E9%81%8E%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89" class="hash-link" aria-label="Direct link to 🔐 所有 API 呼叫都經過身分驗證" title="Direct link to 🔐 所有 API 呼叫都經過身分驗證">​</a></h2>
+<p>不論是提交資料、取得欄位、生成 AI 建議，或是載入表單內容，現在都會透過安全驗證機制，確認來源與權限是否合法。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-無縫整合不需額外設定">🧠 無縫整合，不需額外設定<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update#-%E7%84%A1%E7%B8%AB%E6%95%B4%E5%90%88%E4%B8%8D%E9%9C%80%E9%A1%8D%E5%A4%96%E8%A8%AD%E5%AE%9A" class="hash-link" aria-label="Direct link to 🧠 無縫整合，不需額外設定" title="Direct link to 🧠 無縫整合，不需額外設定">​</a></h2>
+<p>fyro.ai 前端元件與工具都已自動整合這些安全機制，開發者無需手動設定參數，也不用改寫呼叫方式，依然可以正常使用：</p>
+<ul>
+<li>📄 表單編輯器</li>
+<li>💬 AI 外星人</li>
+<li>📷 圖片辨識與貼上</li>
+<li>🔄 表單儲存與更新</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-安心開放給你信任的網站與應用">🌐 安心開放給你信任的網站與應用<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update#-%E5%AE%89%E5%BF%83%E9%96%8B%E6%94%BE%E7%B5%A6%E4%BD%A0%E4%BF%A1%E4%BB%BB%E7%9A%84%E7%B6%B2%E7%AB%99%E8%88%87%E6%87%89%E7%94%A8" class="hash-link" aria-label="Direct link to 🌐 安心開放給你信任的網站與應用" title="Direct link to 🌐 安心開放給你信任的網站與應用">​</a></h2>
+<p>現在你可以放心將 fyro 的 API 與表單嵌入到你自己的網站、App 或內部系統中。</p>
+<p>我們支援「只開放給特定來源」的安全策略，確保只有你授權的平台能夠讀取或送出資料。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-常見應用場景">💡 常見應用場景<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/24/api-key-auth-cors-update#-%E5%B8%B8%E8%A6%8B%E6%87%89%E7%94%A8%E5%A0%B4%E6%99%AF" class="hash-link" aria-label="Direct link to 💡 常見應用場景" title="Direct link to 💡 常見應用場景">​</a></h2>
+<ul>
+<li>在自己的網站嵌入 fyro 表單，讓使用者可以直接填寫與上傳</li>
+<li>將表單功能包進 App 裡，當成原生功能使用</li>
+<li>將 AI 輔助填表整合到企業內部系統，強化自動化流程</li>
+</ul>
+<hr>
+<p>這些升級讓 fyro.ai 的 API 不只是開發工具，更是可以放心上線使用的穩定橋樑。</p>
+<p>如果你有跨平台或整合需求，歡迎聯絡我們，讓 fyro 成為你系統中的智慧表單核心。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>api</category>
+            <category>安全性</category>
+            <category>整合</category>
+            <category>表單平台</category>
+        </item>
+        <item>
+            <title><![CDATA[登入錯誤提示 + 圖片貼上 AI 辨識上線！]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/03/11/login-error-handling-ai-image-paste</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/03/11/login-error-handling-ai-image-paste</guid>
+            <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週我們針對登入體驗與 AI 圖片貼上功能做了兩個大更新，目標是讓 fyro.ai 更直覺、更聰明。]]></description>
+            <content:encoded><![CDATA[<p>這週我們針對登入體驗與 AI 圖片貼上功能做了兩個大更新，目標是讓 fyro.ai 更直覺、更聰明。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-登入失敗時顯示錯誤訊息">🔐 登入失敗時顯示錯誤訊息<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/11/login-error-handling-ai-image-paste#-%E7%99%BB%E5%85%A5%E5%A4%B1%E6%95%97%E6%99%82%E9%A1%AF%E7%A4%BA%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF" class="hash-link" aria-label="Direct link to 🔐 登入失敗時顯示錯誤訊息" title="Direct link to 🔐 登入失敗時顯示錯誤訊息">​</a></h2>
+<p>登入頁面現在會針對常見錯誤主動提示使用者：</p>
+<ul>
+<li>Email 或密碼錯誤時，顯示明確訊息</li>
+<li>空白欄位會即時阻止送出</li>
+<li>JWT 回傳錯誤時也能捕捉錯誤文字並提示</li>
+</ul>
+<p>這讓登入過程更清晰，避免使用者無所適從。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-圖片貼上-ai-辨識欄位內容實驗功能">🖼️ 圖片貼上 AI 辨識欄位內容（實驗功能）<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/11/login-error-handling-ai-image-paste#%EF%B8%8F-%E5%9C%96%E7%89%87%E8%B2%BC%E4%B8%8A-ai-%E8%BE%A8%E8%AD%98%E6%AC%84%E4%BD%8D%E5%85%A7%E5%AE%B9%E5%AF%A6%E9%A9%97%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="Direct link to 🖼️ 圖片貼上 AI 辨識欄位內容（實驗功能）" title="Direct link to 🖼️ 圖片貼上 AI 辨識欄位內容（實驗功能）">​</a></h2>
+<p>現在使用者可以直接複製一張圖片貼到表單中，系統會：</p>
+<ol>
+<li>使用 GPT-4o 辨識圖片內容</li>
+<li>分析欄位值（如：姓名、電話、公司名稱…）</li>
+<li>將辨識結果轉為 <code>AnswerModel</code></li>
+<li>自動貼到對應欄位（含 highlight 動畫）</li>
+</ol>
+<p>你也可以啟用「只貼建議、讓使用者確認」的安全模式。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-新增功能細節">🧪 新增功能細節<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/11/login-error-handling-ai-image-paste#-%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD%E7%B4%B0%E7%AF%80" class="hash-link" aria-label="Direct link to 🧪 新增功能細節" title="Direct link to 🧪 新增功能細節">​</a></h2>
+<ul>
+<li>新增 PasteImageComponent 元件，自動偵測 clipboard 圖片並顯示</li>
+<li>新增 AI 辨識服務 <code>ConvertImageToAnswerModel</code></li>
+<li>加入 <code>ShowErrorMessage</code> 屬性到 Login Razor，切換是否顯示錯誤提示區塊</li>
+</ul>
+<hr>
+<p>這次更新讓 fyro 不只是填表工具，而是<strong>更會理解你的操作意圖</strong>的智慧平台。</p>
+<p>下一步我們將讓圖片辨識支援「名片 + 公文 + 發票」等格式，敬請期待！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>login</category>
+            <category>error handling</category>
+            <category>paste image</category>
+            <category>AI辨識</category>
+        </item>
+        <item>
+            <title><![CDATA[表單頁籤刪除功能與權控強化]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement</guid>
+            <pubDate>Mon, 10 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週針對 fyro.ai 的 eForm2 表單平台進行多項優化，重點包括登入 Token 權限機制的強化、各表單元件整合 JWT，以及頁籤與區段刪除功能的加入，全面提升使用者體驗與開發彈性。]]></description>
+            <content:encoded><![CDATA[<p>這週針對 fyro.ai 的 eForm2 表單平台進行多項優化，重點包括登入 Token 權限機制的強化、各表單元件整合 JWT，以及頁籤與區段刪除功能的加入，全面提升使用者體驗與開發彈性。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-jwt-權控機制全面導入元件">🔐 JWT 權控機制全面導入元件<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement#-jwt-%E6%AC%8A%E6%8E%A7%E6%A9%9F%E5%88%B6%E5%85%A8%E9%9D%A2%E5%B0%8E%E5%85%A5%E5%85%83%E4%BB%B6" class="hash-link" aria-label="Direct link to 🔐 JWT 權控機制全面導入元件" title="Direct link to 🔐 JWT 權控機制全面導入元件">​</a></h2>
+<ul>
+<li>每個表單元件（如 Textbox, Checkbox, Radio）皆新增支援 <code>JwtSecurityToken</code> 的參數</li>
+<li>當使用者載入表單頁面時，系統會自動從 <code>localStorage</code> 讀取 Token 並解析，提取：<!-- -->
+<ul>
+<li><code>sub</code>（使用者 ID）</li>
+<li><code>role</code>（例如 admin, user）</li>
+<li><code>group</code>, <code>jobRole</code> 等自定義欄位</li>
+</ul>
+</li>
+</ul>
+<p>這些資訊可用來在元件內判斷是否顯示、是否可編輯等，讓欄位行為更彈性。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-加入頁籤與刪除頁籤功能">🗂️ 加入頁籤與刪除頁籤功能<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement#%EF%B8%8F-%E5%8A%A0%E5%85%A5%E9%A0%81%E7%B1%A4%E8%88%87%E5%88%AA%E9%99%A4%E9%A0%81%E7%B1%A4%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="Direct link to 🗂️ 加入頁籤與刪除頁籤功能" title="Direct link to 🗂️ 加入頁籤與刪除頁籤功能">​</a></h2>
+<ul>
+<li>在 Form 設計畫面中，每個 Tab 現在支援「刪除」與「新增」操作按鈕</li>
+<li>權限驗證為 <code>form-editor</code> 才能進行操作</li>
+<li>所有操作皆即時同步後端 schema，保持資料一致性</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-區段也能刪除了">🧱 區段也能刪除了<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement#-%E5%8D%80%E6%AE%B5%E4%B9%9F%E8%83%BD%E5%88%AA%E9%99%A4%E4%BA%86" class="hash-link" aria-label="Direct link to 🧱 區段也能刪除了" title="Direct link to 🧱 區段也能刪除了">​</a></h2>
+<ul>
+<li>各 section 加入刪除按鈕（需具備 <code>form-editor</code> 權限）</li>
+<li>使用者介面透過浮動按鈕方式呈現，避免誤操作</li>
+<li>刪除時同步移除前端記憶體中的 sectionRefs 映射</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-小更新補充">💡 小更新補充<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/03/10/tab-deletion-jwt-enhancement#-%E5%B0%8F%E6%9B%B4%E6%96%B0%E8%A3%9C%E5%85%85" class="hash-link" aria-label="Direct link to 💡 小更新補充" title="Direct link to 💡 小更新補充">​</a></h2>
+<ul>
+<li>修正 Copy 貼上元件時 ID 重複的問題，透過遞迴重新產生新 ID</li>
+<li>Textbox 元件微調邊界樣式</li>
+<li>更新 Token 權控設計文件，明確說明 <code>localStorage</code> 的存取流程與 JWT Payload 結構</li>
+</ul>
+<hr>
+<p>這次更新讓 fyro 的表單編輯流程更加穩定、安全，也更貼近實際應用時的權限與角色控制需求。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>jwt</category>
+            <category>權限控管</category>
+            <category>表單編輯</category>
+            <category>eForm2</category>
+        </item>
+        <item>
+            <title><![CDATA[外星人小助手上線！表單 AI 協作進化中]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist</guid>
+            <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這週 fyro.ai 的 AI 輔助系統再進化！我們整合了新的互動邏輯與提示機制，讓「外星人」不只是陪你聊天，更會主動幫你完成欄位內容與貼上複製欄位。]]></description>
+            <content:encoded><![CDATA[<p>這週 fyro.ai 的 AI 輔助系統再進化！我們整合了新的互動邏輯與提示機制，讓「外星人」不只是陪你聊天，更會主動幫你完成欄位內容與貼上複製欄位。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-外星人助理會幫你貼欄位了">👽 外星人助理會幫你貼欄位了！<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist#-%E5%A4%96%E6%98%9F%E4%BA%BA%E5%8A%A9%E7%90%86%E6%9C%83%E5%B9%AB%E4%BD%A0%E8%B2%BC%E6%AC%84%E4%BD%8D%E4%BA%86" class="hash-link" aria-label="Direct link to 👽 外星人助理會幫你貼欄位了！" title="Direct link to 👽 外星人助理會幫你貼欄位了！">​</a></h2>
+<p>除了語言建議，現在 AI 外星人會根據你下達的指令，自動：</p>
+<ul>
+<li>🔍 找到對應欄位</li>
+<li>📋 自動貼上回答（如從圖片中擷取公司名稱）</li>
+<li>✅ 完成後會顯示動畫提示（例如 highlight 或 emoji）</li>
+</ul>
+<p>這些貼欄位邏輯讓 Chat 變得更像一個「會做事」的協作夥伴。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-支援多欄位複製">🧪 支援多欄位複製<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist#-%E6%94%AF%E6%8F%B4%E5%A4%9A%E6%AC%84%E4%BD%8D%E8%A4%87%E8%A3%BD" class="hash-link" aria-label="Direct link to 🧪 支援多欄位複製" title="Direct link to 🧪 支援多欄位複製">​</a></h2>
+<p>我們引入一個新功能：<strong>複製一段欄位結構到另一段表單中</strong>！</p>
+<p>例如你對外星人說：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">幫我把基本資料貼到公司負責人那區</span><br></span></code></pre></div></div>
+<p>外星人會將姓名、電話、信箱等欄位自動複製過去。這對填寫類似結構表單非常實用。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-技術強化">🔧 技術強化<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist#-%E6%8A%80%E8%A1%93%E5%BC%B7%E5%8C%96" class="hash-link" aria-label="Direct link to 🔧 技術強化" title="Direct link to 🔧 技術強化">​</a></h2>
+<ul>
+<li>Chat context now includes current section schema + value</li>
+<li>提供 API <code>PutAnswerToFormSection</code> 讓外星人能從後端推答案給畫面</li>
+<li>新增 <code>"show as Alien"</code> 與 <code>"type":"alien"</code> 控制是否顯示角色回答</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-ui-調整">🎨 UI 調整<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/27/ai-copy-paste-and-alien-assist#-ui-%E8%AA%BF%E6%95%B4" class="hash-link" aria-label="Direct link to 🎨 UI 調整" title="Direct link to 🎨 UI 調整">​</a></h2>
+<ul>
+<li>每段 Chat 都可以顯示對應欄位 highlight（如聚焦）</li>
+<li>修正多欄位貼上後覆蓋錯位的情形</li>
+<li>如果外星人回答中包含「值」與「欄位」，會自動疊層提示你套用</li>
+</ul>
+<hr>
+<p>這不再是單純的聊天，而是實際能操作 fyro 表單邏輯的 AI 協作者。</p>
+<p>下次填表單時，不妨對外星人說說看：「幫我把公司資料填上去～」👽</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>AI輔助</category>
+            <category>表單輸入</category>
+            <category>外星人</category>
+            <category>使用者體驗</category>
+        </item>
+        <item>
+            <title><![CDATA[登入頁面樣式與 App 導覽列優化]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/02/24/login-ui-and-navbar-improvements</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/02/24/login-ui-and-navbar-improvements</guid>
+            <pubDate>Mon, 24 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[本週的更新重點放在「登入體驗」與「App 導覽結構」的優化，讓 fyro 的前端互動介面更貼近日常使用者的需求。]]></description>
+            <content:encoded><![CDATA[<p>本週的更新重點放在「登入體驗」與「App 導覽結構」的優化，讓 fyro 的前端互動介面更貼近日常使用者的需求。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-登入頁面樣式強化">🎨 登入頁面樣式強化<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/24/login-ui-and-navbar-improvements#-%E7%99%BB%E5%85%A5%E9%A0%81%E9%9D%A2%E6%A8%A3%E5%BC%8F%E5%BC%B7%E5%8C%96" class="hash-link" aria-label="Direct link to 🎨 登入頁面樣式強化" title="Direct link to 🎨 登入頁面樣式強化">​</a></h2>
+<p>我們替 Login.razor 頁面導入了完整的 Tailwind CSS 自訂樣式：</p>
+<ul>
+<li>支援 <strong>RWD 響應式設計</strong>，在小螢幕與桌面都能一致呈現</li>
+<li>使用者登入畫面風格現代簡潔，並加上第三方登入按鈕樣式（Google / Apple / Azure AD）</li>
+<li>修改背景與 padding 設定，使樣式更貼合實際 App 頁面</li>
+</ul>
+<p>這些改動不只強化視覺一致性，也為未來登入行為自動化與測試鋪路。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-新版-app-導覽列與底部導覽">🧭 新版 App 導覽列與底部導覽<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/24/login-ui-and-navbar-improvements#-%E6%96%B0%E7%89%88-app-%E5%B0%8E%E8%A6%BD%E5%88%97%E8%88%87%E5%BA%95%E9%83%A8%E5%B0%8E%E8%A6%BD" class="hash-link" aria-label="Direct link to 🧭 新版 App 導覽列與底部導覽" title="Direct link to 🧭 新版 App 導覽列與底部導覽">​</a></h2>
+<p>我們同步完成了 eForm2App 的導航列設計：</p>
+<ul>
+<li>建立底部固定導覽列（Footer Navigation）</li>
+<li>五個主要分頁：首頁、我的珍藏、購物車、搜尋、會員專區</li>
+<li>搭配 SVG 圖示與文字說明，符合 App 常見 UI 慣例</li>
+</ul>
+<p>讓 fyro 的行動端操作體驗更直覺、易用。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-eform2common-專案建立">🧱 eForm2Common 專案建立<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/24/login-ui-and-navbar-improvements#-eform2common-%E5%B0%88%E6%A1%88%E5%BB%BA%E7%AB%8B" class="hash-link" aria-label="Direct link to 🧱 eForm2Common 專案建立" title="Direct link to 🧱 eForm2Common 專案建立">​</a></h2>
+<p>為了整合登入與使用者模型邏輯，我們新建了 <code>eForm2Common</code> 專案，統一放置：</p>
+<ul>
+<li>UserLoginModel 等常用模型</li>
+<li>共用的元件與介面依賴，減少跨專案重複定義</li>
+</ul>
+<p>這樣一來，不論是在 Server、App 或 API 都能共享一致的登入資料結構。</p>
+<hr>
+<p>這些更新代表 fyro 正一步步從「開發者工具」走向「產品級使用者體驗」，朝跨平台與視覺一致性邁進！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>eForm2App</category>
+            <category>LoginUI</category>
+            <category>Tailwind</category>
+            <category>Navbar</category>
+        </item>
+        <item>
+            <title><![CDATA[Chat 與 Form 的整合：真正會「對話」的表單體驗]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/02/17/chatform-integration</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/02/17/chatform-integration</guid>
+            <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這次 fyro.ai 團隊完成了一項重要的整合更新 —— 讓 Chat 與 Form 真正「會對話」！]]></description>
+            <content:encoded><![CDATA[<p>這次 fyro.ai 團隊完成了一項重要的整合更新 —— <strong>讓 Chat 與 Form 真正「會對話」！</strong></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-表單與-chat-同步互動">🤝 表單與 Chat 同步互動<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/17/chatform-integration#-%E8%A1%A8%E5%96%AE%E8%88%87-chat-%E5%90%8C%E6%AD%A5%E4%BA%92%E5%8B%95" class="hash-link" aria-label="Direct link to 🤝 表單與 Chat 同步互動" title="Direct link to 🤝 表單與 Chat 同步互動">​</a></h2>
+<p>我們打造了全新的 <code>/ChatForm/{FormId}/{DataKey}</code> 介面，左側是填寫中的表單，右側是 AI 聊天視窗，透過 iframe 雙向溝通，實現：</p>
+<ul>
+<li>🔄 Chat 可以取得目前表單中填寫的資料</li>
+<li>🧠 ChatBot 回應可以根據內容更加精準、上下文更完整</li>
+<li>👀 開發者不用額外串接即可享有這種跨模組的體驗</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-技術亮點">🔌 技術亮點<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/17/chatform-integration#-%E6%8A%80%E8%A1%93%E4%BA%AE%E9%BB%9E" class="hash-link" aria-label="Direct link to 🔌 技術亮點" title="Direct link to 🔌 技術亮點">​</a></h2>
+<ul>
+<li>利用 <code>window.postMessage</code> 進行 <strong>跨 iframe 資料交換</strong></li>
+<li>增加 <code>/FormForChatForm</code> 與 <code>/ChatForChatForm</code> 雙頁支援不同渲染邏輯</li>
+<li>Form 傳遞 section input model 給 Chat</li>
+<li>Chat 可向 parent 要求 sections 欄位值</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-開發者福利">🧪 開發者福利<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/17/chatform-integration#-%E9%96%8B%E7%99%BC%E8%80%85%E7%A6%8F%E5%88%A9" class="hash-link" aria-label="Direct link to 🧪 開發者福利" title="Direct link to 🧪 開發者福利">​</a></h2>
+<p>只要在你的頁面中嵌入：</p>
+<div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">iframe</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">src</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">/ChatForm/{FormId}/{DataKey}</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag" style="color:#00009f"> </span><span class="token tag punctuation" style="color:#393A34">/&gt;</span><br></span></code></pre></div></div>
+<p>就能直接享受一頁式的互動式填寫與 AI 輔助，不需額外串接 Chat API 或寫前端橋接邏輯。</p>
+<hr>
+<p>這樣的設計讓 fyro.ai 更接近「智慧化互動表單平台」，幫助使用者邊寫邊問，邊問邊修，節省溝通與反覆修改的成本。</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>ChatForm</category>
+            <category>iframe</category>
+            <category>AI互動</category>
+            <category>表單整合</category>
+        </item>
+        <item>
+            <title><![CDATA[Radio + Text 混合欄位體驗升級，Grid 設定與歷史紀錄修正]]></title>
+            <link>https://richhuang.github.io/eform2_docs/en/blog/2025/02/05/radio-text-merge-enhancement</link>
+            <guid>https://richhuang.github.io/eform2_docs/en/blog/2025/02/05/radio-text-merge-enhancement</guid>
+            <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[這次我們針對 fyro.ai 表單元件中幾個使用率高的部分進行體驗優化與修正，讓整體流程更順暢。]]></description>
+            <content:encoded><![CDATA[<p>這次我們針對 fyro.ai 表單元件中幾個使用率高的部分進行體驗優化與修正，讓整體流程更順暢。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-radio--text-混合欄位邏輯更清晰">🎯 Radio + Text 混合欄位邏輯更清晰<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/05/radio-text-merge-enhancement#-radio--text-%E6%B7%B7%E5%90%88%E6%AC%84%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%9B%B4%E6%B8%85%E6%99%B0" class="hash-link" aria-label="Direct link to 🎯 Radio + Text 混合欄位邏輯更清晰" title="Direct link to 🎯 Radio + Text 混合欄位邏輯更清晰">​</a></h2>
+<p>當使用者勾選「其他」選項後，會自動顯示文字輸入欄位，這次我們做了幾個調整：</p>
+<ul>
+<li>預設 Radio 選項中如果包含 <code>[其他]</code>，系統會自動啟用配對文字欄位</li>
+<li>點選「其他」時，會自動 focus 到文字輸入欄位</li>
+<li>可自訂其他欄位的 placeholder 與輸入規則</li>
+</ul>
+<p>這樣可以讓問卷或表單更符合使用者真實回答情境，也更接近常見實務需求。</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-grid-欄位可調整是否顯示">🧩 Grid 欄位可調整是否顯示<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/05/radio-text-merge-enhancement#-grid-%E6%AC%84%E4%BD%8D%E5%8F%AF%E8%AA%BF%E6%95%B4%E6%98%AF%E5%90%A6%E9%A1%AF%E7%A4%BA" class="hash-link" aria-label="Direct link to 🧩 Grid 欄位可調整是否顯示" title="Direct link to 🧩 Grid 欄位可調整是否顯示">​</a></h2>
+<p>我們針對 Grid 資料表元件增加欄位設定功能，現在你可以：</p>
+<ul>
+<li>在設計階段設定哪些欄位預設隱藏</li>
+<li>在畫面上透過欄位切換選單自由調整</li>
+<li>支援欄位自動排序與記憶最後狀態</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-修正歷史紀錄顯示錯誤">🐞 修正歷史紀錄顯示錯誤<a href="https://richhuang.github.io/eform2_docs/en/blog/2025/02/05/radio-text-merge-enhancement#-%E4%BF%AE%E6%AD%A3%E6%AD%B7%E5%8F%B2%E7%B4%80%E9%8C%84%E9%A1%AF%E7%A4%BA%E9%8C%AF%E8%AA%A4" class="hash-link" aria-label="Direct link to 🐞 修正歷史紀錄顯示錯誤" title="Direct link to 🐞 修正歷史紀錄顯示錯誤">​</a></h2>
+<p>之前切換不同 FormId 時，歷史紀錄（History）區塊可能不會自動更新。這次已修正：</p>
+<ul>
+<li>每次切換表單 ID，會重新載入對應歷程記錄</li>
+<li>修正連續切換造成記憶體資料殘留問題</li>
+</ul>
+<hr>
+<p>這些細節雖然看似小，但每個都大大提升 fyro.ai 實際操作上的流暢度與穩定性。如果你有欄位類型或操作上的建議，也歡迎和我們分享！</p>]]></content:encoded>
+            <author>rich.msft@gmail.com (Rich Huang)</author>
+            <category>fyro</category>
+            <category>表單欄位</category>
+            <category>使用者體驗</category>
+            <category>Grid</category>
+            <category>RadioText</category>
+        </item>
+    </channel>
+</rss>
