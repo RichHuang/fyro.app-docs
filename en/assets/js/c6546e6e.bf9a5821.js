@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeform_2_docs=self.webpackChunkeform_2_docs||[]).push([[4483],{8745:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/fyro.app-docs/en/blog","page":1,"postsPerPage":10,"totalPages":4,"totalCount":37,"nextPage":"/fyro.app-docs/en/blog/page/2","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

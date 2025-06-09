@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeform_2_docs=self.webpackChunkeform_2_docs||[]).push([[7137],{9924:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/eform2_docs/en/blog","page":1,"postsPerPage":10,"totalPages":4,"totalCount":37,"nextPage":"/eform2_docs/en/blog/page/2","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
