@@ -3,6 +3,7 @@ title: "fyro.ai 是什麼？"
 date: 2025-06-03
 authors: [rich]
 sidebar_position: 1
+slug: /
 ---
 
 在這個資訊系統開發越來越快速、整合越來越複雜的時代，fyro.ai 的誕生，是為了幫助你「用更快的速度，做更聰明的整合」。
